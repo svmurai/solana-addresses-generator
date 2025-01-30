@@ -12,8 +12,8 @@ const mutex = new Mutex();
 function isInterestingAddress(publicKey) {
     const lowerPublicKey = publicKey.toLowerCase();
 
-    // Проверяем, начинается ли адрес на SVM (регистр не важен)
-    if (lowerPublicKey.startsWith("svm")) {
+    // Проверяем, начинается ли адрес на SVM (регистр важен)
+    if (publicKey.startsWith("SVM")) {
         return true;
     }
 
@@ -24,6 +24,7 @@ function isInterestingAddress(publicKey) {
         "samura1", "samura!", "svmura1", "svmur@1", "samur@1"
     ];
 
+    // Проверяем, начинается ли адрес на что-то похожее на "svmurai" (регистр не важен)
     for (const variant of variants) {
         if (lowerPublicKey.includes(variant)) {
             return true;
