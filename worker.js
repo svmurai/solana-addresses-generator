@@ -26,7 +26,7 @@ function isInterestingAddress(publicKey) {
 
     // Проверяем, начинается ли адрес на что-то похожее на "svmurai" (регистр не важен)
     for (const variant of variants) {
-        if (lowerPublicKey.includes(variant)) {
+        if (lowerPublicKey.startsWith(variant)) {
             return true;
         }
     }
