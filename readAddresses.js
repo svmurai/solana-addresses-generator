@@ -18,10 +18,10 @@ function readAddresses() {
 
         // Выводим публичные адреса
         lines.forEach((line) => {
-            if (line.trim() === "") return; // Пропускаем пустые строки
+            if (line.trim() === "") return;
 
-            const [publicKey] = line.split(","); // Разделяем строку на публичный и приватный ключ
-            console.log(publicKey);
+            const [publicKey] = line.split(",");
+            console.log(publicKey.slice(0, 7) + "..." + publicKey.slice(-7));
         });
     });
 }
