@@ -19,9 +19,8 @@ function isInterestingAddress(publicKey) {
 
     // Проверяем, содержит ли адрес что-то похожее на "svmurai" или "samurai"
     const variants = [
-        "svmurai", "sVmUrAi", "samurai", "svmural", "svmur4i", "svmur41", "svmur4l",
-        "5vmur41", "5vmurai", "svmura1", "svmura!", "svmur@i", "samur@i", "samur@1",
-        "samura1", "samura!", "svmura1", "svmur@1", "samur@1"
+        "svmurai", "samurai", "svmural", "svmur4i", "svmur41", "svmur4l",
+        "5vmur41", "5vmurai", "svmura1", "samura1", "svmura1",
     ];
 
     // Проверяем, начинается ли адрес на что-то похожее на "svmurai" (регистр не важен)
